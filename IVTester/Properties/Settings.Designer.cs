@@ -70,5 +70,77 @@ namespace IVTester.Properties {
                 this["CurrentMeasureTool1"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool DigitalOutputEnable {
+            get {
+                return ((bool)(this["DigitalOutputEnable"]));
+            }
+            set {
+                this["DigitalOutputEnable"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Dev1/ai0")]
+        public string DaqAinChannelsList {
+            get {
+                return ((string)(this["DaqAinChannelsList"]));
+            }
+            set {
+                this["DaqAinChannelsList"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int NumDaqOuts {
+            get {
+                return ((int)(this["NumDaqOuts"]));
+            }
+            set {
+                this["NumDaqOuts"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool DaqEnable {
+            get {
+                return ((bool)(this["DaqEnable"]));
+            }
+            set {
+                this["DaqEnable"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Dev1/ao0")]
+        public string DaqOutput1 {
+            get {
+                return ((string)(this["DaqOutput1"]));
+            }
+            set {
+                this["DaqOutput1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Dev1/ao1")]
+        public string DaqOutput2 {
+            get {
+                return ((string)(this["DaqOutput2"]));
+            }
+            set {
+                this["DaqOutput2"] = value;
+            }
+        }
     }
 }

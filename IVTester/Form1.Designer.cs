@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.currentMeasureControl1 = new IVTester.CurrentMeasureControl();
+            this.daqControl1 = new IVTester.DaqControl();
             this.SuspendLayout();
             // 
             // currentMeasureControl1
@@ -38,11 +39,19 @@
             this.currentMeasureControl1.Size = new System.Drawing.Size(404, 174);
             this.currentMeasureControl1.TabIndex = 0;
             // 
+            // daqControl1
+            // 
+            this.daqControl1.Location = new System.Drawing.Point(576, 0);
+            this.daqControl1.Name = "daqControl1";
+            this.daqControl1.Size = new System.Drawing.Size(464, 229);
+            this.daqControl1.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1090, 322);
+            this.Controls.Add(this.daqControl1);
             this.Controls.Add(this.currentMeasureControl1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
@@ -54,6 +63,7 @@
         #endregion
 
         private CurrentMeasureControl currentMeasureControl1;
+        private DaqControl daqControl1;
 
     }
 }

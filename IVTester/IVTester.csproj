@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="NationalInstruments.Common, Version=13.0.40.188, Culture=neutral, PublicKeyToken=dc6ad606294fc298, processorArchitecture=MSIL" />
+    <Reference Include="NationalInstruments.DAQmx, Version=9.6.45.292, Culture=neutral, PublicKeyToken=4febd62461bf11a4, processorArchitecture=x86" />
     <Reference Include="NationalInstruments.NI4882, Version=13.0.45.159, Culture=neutral, PublicKeyToken=4febd62461bf11a4, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -47,6 +48,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CurrentMeasureToolAbstract.cs" />
+    <Compile Include="DaqAction.cs" />
+    <Compile Include="DaqConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaqConfigForm.Designer.cs">
+      <DependentUpon>DaqConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DaqControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DaqControl.Designer.cs">
+      <DependentUpon>DaqControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="HelperClasses\DL1211Control.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -64,6 +78,12 @@
     <Compile Include="UserControls\CurrentMeasureControl.Designer.cs">
       <DependentUpon>CurrentMeasureControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DaqConfigForm.resx">
+      <DependentUpon>DaqConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DaqControl.resx">
+      <DependentUpon>DaqControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

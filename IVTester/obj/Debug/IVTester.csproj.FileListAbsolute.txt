@@ -19,3 +19,7 @@ C:\Users\eric\Documents\GitHub\IVTester\IVTester\bin\Debug\IVTester.exe
 C:\Users\eric\Documents\GitHub\IVTester\IVTester\bin\Debug\IVTester.pdb
 C:\Users\eric\Documents\GitHub\IVTester\IVTester\bin\Debug\NationalInstruments.Common.Native.dll
 C:\Users\eric\Documents\GitHub\IVTester\IVTester\obj\Debug\IVTester.CurrentMeasureControl.resources
+C:\Users\eric\Documents\GitHub\IVTester\IVTester\bin\Debug\NationalInstruments.DAQmx.dll
+C:\Users\eric\Documents\GitHub\IVTester\IVTester\bin\Debug\NationalInstruments.DAQmx.xml
+C:\Users\eric\Documents\GitHub\IVTester\IVTester\obj\Debug\IVTester.DaqConfigForm.resources
+C:\Users\eric\Documents\GitHub\IVTester\IVTester\obj\Debug\IVTester.DaqControl.resources

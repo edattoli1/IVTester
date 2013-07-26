@@ -14,5 +14,23 @@
     <Setting Name="CurrentMeasureTool1" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
+    <Setting Name="DigitalOutputEnable" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DaqAinChannelsList" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Dev1/ai0</Value>
+    </Setting>
+    <Setting Name="NumDaqOuts" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="DaqEnable" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DaqOutput1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Dev1/ao0</Value>
+    </Setting>
+    <Setting Name="DaqOutput2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Dev1/ao1</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
