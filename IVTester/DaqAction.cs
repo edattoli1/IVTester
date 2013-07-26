@@ -16,8 +16,13 @@ namespace IVTester
 
         public DaqAction()
         {
-            daqOutputRangeMin = 0;
-            daqOutputRangeMax = 5;
+            daqOutputRangeMin = Properties.Settings.Default.DaqBiasMinRange;
+            daqOutputRangeMax = Properties.Settings.Default.DaqBiasMaxRange;
+        }
+
+        public void Close()
+        {
+            myTask.Dispose();
         }
 
         public DaqAction(double daqOutputRangeMinIn, double daqOutputRangeMaxIn)

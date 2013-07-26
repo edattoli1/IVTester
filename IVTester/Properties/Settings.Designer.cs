@@ -142,5 +142,29 @@ namespace IVTester.Properties {
                 this["DaqOutput2"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("-10")]
+        public double DaqBiasMinRange {
+            get {
+                return ((double)(this["DaqBiasMinRange"]));
+            }
+            set {
+                this["DaqBiasMinRange"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public double DaqBiasMaxRange {
+            get {
+                return ((double)(this["DaqBiasMaxRange"]));
+            }
+            set {
+                this["DaqBiasMaxRange"] = value;
+            }
+        }
     }
 }
