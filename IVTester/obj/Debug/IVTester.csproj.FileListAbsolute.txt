@@ -8,3 +8,14 @@ C:\Users\User\Documents\GitHub\IVTester\IVTester\bin\Debug\IVTester.pdb
 C:\Users\User\Documents\GitHub\IVTester\IVTester\bin\Debug\NationalInstruments.Common.Native.dll
 C:\Users\User\Documents\GitHub\IVTester\IVTester\obj\Debug\IVTester.exe
 C:\Users\User\Documents\GitHub\IVTester\IVTester\obj\Debug\IVTester.pdb
+C:\Users\eric\Documents\GitHub\IVTester\IVTester\bin\Debug\IVTester.exe.config
+C:\Users\eric\Documents\GitHub\IVTester\IVTester\obj\Debug\IVTester.exe
+C:\Users\eric\Documents\GitHub\IVTester\IVTester\obj\Debug\IVTester.pdb
+C:\Users\eric\Documents\GitHub\IVTester\IVTester\obj\Debug\IVTester.csprojResolveAssemblyReference.cache
+C:\Users\eric\Documents\GitHub\IVTester\IVTester\obj\Debug\IVTester.Form1.resources
+C:\Users\eric\Documents\GitHub\IVTester\IVTester\obj\Debug\IVTester.Properties.Resources.resources
+C:\Users\eric\Documents\GitHub\IVTester\IVTester\obj\Debug\IVTester.csproj.GenerateResource.Cache
+C:\Users\eric\Documents\GitHub\IVTester\IVTester\bin\Debug\IVTester.exe
+C:\Users\eric\Documents\GitHub\IVTester\IVTester\bin\Debug\IVTester.pdb
+C:\Users\eric\Documents\GitHub\IVTester\IVTester\bin\Debug\NationalInstruments.Common.Native.dll
+C:\Users\eric\Documents\GitHub\IVTester\IVTester\obj\Debug\IVTester.CurrentMeasureControl.resources

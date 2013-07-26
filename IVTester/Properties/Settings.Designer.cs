@@ -58,5 +58,17 @@ namespace IVTester.Properties {
                 this["ElectrometerControlEnable"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int CurrentMeasureTool {
+            get {
+                return ((int)(this["CurrentMeasureTool"]));
+            }
+            set {
+                this["CurrentMeasureTool"] = value;
+            }
+        }
     }
 }

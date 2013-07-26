@@ -14,6 +14,7 @@ namespace IVTester
     {
 
         Ke6517Control ke6517Control;
+        UserControl currentMeasureControl;
         
         public Form1()
         {
@@ -22,16 +23,16 @@ namespace IVTester
             ke6517Control.InitSession();
         }
 
-        private void resetButton_Click(object sender, EventArgs e)
-        {
-            ke6517Control.InitDevice();
-        }
+        //private void resetButton_Click(object sender, EventArgs e)
+        //{
+        //    ke6517Control.InitDevice();
+        //}
 
-        private void getReadingButton_Click(object sender, EventArgs e)
-        {
-            double inRdg;
-            inRdg = ke6517Control.GetReading();
-            presRdgBox.Text = inRdg.ToString();
-        }
+        //private void getReadingButton_Click(object sender, EventArgs e)
+        //{
+        //    double inRdg;
+        //    inRdg = ke6517Control.GetReading();
+        //    presRdgBox.Text = inRdg.ToString();
+        //}
     }
 }

@@ -8,12 +8,12 @@ using System.Windows.Forms;
 
 namespace IVTester
 {
-    class Ke6517Control
+    class Ke6517Control : CurrentMeasureToolAbstract
     {
         private int GPIBaddress = 14;
         private Device device;
 
-        public void InitSession()
+        override public void InitSession()
         {
             try
             {
@@ -38,7 +38,7 @@ namespace IVTester
             
         }
 
-        public void EndSession()
+        override public void EndSession()
         {
             device.Dispose();
         }
@@ -81,7 +81,7 @@ namespace IVTester
 
 
         // Initalize Keithley picoammeter to default state
-        public void InitDevice()
+        override public void InitDevice()
         {
             string initString1 = ":SYST:PRES;:SENS:FUNC 'CURR';:SYST:ZCH OFF";
 
@@ -126,7 +126,7 @@ namespace IVTester
 
         }
 
-        public void SetRange(int newRange)
+        override public void SetRange(int newRange)
         {
 
             try
@@ -143,7 +143,7 @@ namespace IVTester
             
         }
 
-        public double GetReading()
+        override public double GetReading()
         {
             double returnValue = 0;
             string retrievedString = "0.00";
@@ -169,7 +169,7 @@ namespace IVTester
             return returnValue;
         }
 
-        public void ChangeNplc(double newNplcVal)
+        override public void ChangeNplc(double newNplcVal)
         {
             try
             {

@@ -28,62 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.getReadingButton = new System.Windows.Forms.Button();
-            this.presRdgBox = new System.Windows.Forms.TextBox();
-            this.resetButton = new System.Windows.Forms.Button();
+            this.currentMeasureControl1 = new IVTester.CurrentMeasureControl();
             this.SuspendLayout();
             // 
-            // getReadingButton
+            // currentMeasureControl1
             // 
-            this.getReadingButton.Location = new System.Drawing.Point(44, 106);
-            this.getReadingButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.getReadingButton.Name = "getReadingButton";
-            this.getReadingButton.Size = new System.Drawing.Size(100, 28);
-            this.getReadingButton.TabIndex = 0;
-            this.getReadingButton.Text = "Get Reading";
-            this.getReadingButton.UseVisualStyleBackColor = true;
-            this.getReadingButton.Click += new System.EventHandler(this.getReadingButton_Click);
-            // 
-            // presRdgBox
-            // 
-            this.presRdgBox.Location = new System.Drawing.Point(179, 108);
-            this.presRdgBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.presRdgBox.Name = "presRdgBox";
-            this.presRdgBox.ReadOnly = true;
-            this.presRdgBox.Size = new System.Drawing.Size(132, 22);
-            this.presRdgBox.TabIndex = 1;
-            // 
-            // resetButton
-            // 
-            this.resetButton.Location = new System.Drawing.Point(44, 39);
-            this.resetButton.Name = "resetButton";
-            this.resetButton.Size = new System.Drawing.Size(75, 23);
-            this.resetButton.TabIndex = 2;
-            this.resetButton.Text = "Reset";
-            this.resetButton.UseVisualStyleBackColor = true;
-            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
+            this.currentMeasureControl1.Location = new System.Drawing.Point(0, 0);
+            this.currentMeasureControl1.Name = "currentMeasureControl1";
+            this.currentMeasureControl1.Size = new System.Drawing.Size(404, 174);
+            this.currentMeasureControl1.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(379, 322);
-            this.Controls.Add(this.resetButton);
-            this.Controls.Add(this.presRdgBox);
-            this.Controls.Add(this.getReadingButton);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClientSize = new System.Drawing.Size(1090, 322);
+            this.Controls.Add(this.currentMeasureControl1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button getReadingButton;
-        private System.Windows.Forms.TextBox presRdgBox;
-        private System.Windows.Forms.Button resetButton;
+        private CurrentMeasureControl currentMeasureControl1;
+
     }
 }
 
