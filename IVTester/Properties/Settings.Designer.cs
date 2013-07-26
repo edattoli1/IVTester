@@ -50,24 +50,24 @@ namespace IVTester.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool ElectrometerControlEnable {
+        public bool CurrentMeasureEnable1 {
             get {
-                return ((bool)(this["ElectrometerControlEnable"]));
+                return ((bool)(this["CurrentMeasureEnable1"]));
             }
             set {
-                this["ElectrometerControlEnable"] = value;
+                this["CurrentMeasureEnable1"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int CurrentMeasureTool {
+        public int CurrentMeasureTool1 {
             get {
-                return ((int)(this["CurrentMeasureTool"]));
+                return ((int)(this["CurrentMeasureTool1"]));
             }
             set {
-                this["CurrentMeasureTool"] = value;
+                this["CurrentMeasureTool1"] = value;
             }
         }
     }

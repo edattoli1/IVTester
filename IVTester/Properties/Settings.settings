@@ -8,10 +8,10 @@
     <Setting Name="PicoammNPLC" Type="System.Double" Scope="User">
       <Value Profile="(Default)">6</Value>
     </Setting>
-    <Setting Name="ElectrometerControlEnable" Type="System.Boolean" Scope="User">
+    <Setting Name="CurrentMeasureEnable1" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="CurrentMeasureTool" Type="System.Int32" Scope="User">
+    <Setting Name="CurrentMeasureTool1" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
   </Settings>

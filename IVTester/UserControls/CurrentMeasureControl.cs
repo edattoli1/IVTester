@@ -18,7 +18,7 @@ namespace IVTester
         {
             InitializeComponent();
 
-            currentMeasureComboBox.SelectedIndex = Properties.Settings.Default.CurrentMeasureTool;
+            currentMeasureComboBox.SelectedIndex = Properties.Settings.Default.CurrentMeasureTool1;
             currentMeasureComboBox.SelectedIndexChanged += new EventHandler(currentMeasureComboBox_IndexChangedHandler);
 
 
@@ -28,7 +28,7 @@ namespace IVTester
 
         internal void currentMeasureComboBox_IndexChangedHandler(object obj, EventArgs e)
         {
-            Properties.Settings.Default.CurrentMeasureTool = currentMeasureComboBox.SelectedIndex;
+            Properties.Settings.Default.CurrentMeasureTool1 = currentMeasureComboBox.SelectedIndex;
 
             ChangeCurrentCurrentMeasureTool(currentMeasureComboBox.SelectedIndex);
 
@@ -45,6 +45,10 @@ namespace IVTester
 
                 case (1):
                     currentMeasureToolControlInstance = new Ke6517Control();
+                    break;
+
+                case (2):
+                    currentMeasureToolControlInstance = new Ke648xControl();
                     break;
 
 

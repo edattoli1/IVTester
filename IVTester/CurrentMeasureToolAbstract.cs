@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IVTester
 {
-    abstract class CurrentMeasureToolAbstract
+    abstract public class CurrentMeasureToolAbstract
     {
         abstract public void InitSession();
         abstract public void EndSession();

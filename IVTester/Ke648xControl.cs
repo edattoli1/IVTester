@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 using NationalInstruments.NI4882;
 using System.Windows.Forms;
 
+
 namespace IVTester
 {
-    class Ke6517Control : CurrentMeasureToolAbstract
+    public class Ke648xControl : CurrentMeasureToolAbstract
     {
-        private int GPIBaddress = 14;
+        private int GPIBaddress = 22;
         private Device device;
 
         override public void InitSession()
@@ -35,7 +36,7 @@ namespace IVTester
             {
                 Cursor.Current = Cursors.Default;
             }
-            
+
         }
 
         override public void EndSession()
@@ -65,7 +66,7 @@ namespace IVTester
             {
                 Cursor.Current = Cursors.WaitCursor;
                 stringRead = device.ReadString();
-                
+
             }
             catch (Exception ex)
             {
@@ -83,38 +84,51 @@ namespace IVTester
         // Initalize Keithley picoammeter to default state
         override public void InitDevice()
         {
-            string initString1 = ":SYST:PRES;:SENS:FUNC 'CURR';:SYST:ZCH OFF";
-
-            string initString2 = ":SENS:CURR:AVER:TYPE NONE;:SENS:CURR:MED:STAT OFF";
-
-            string initString3 = ":FORM:ELEM READ";
-
-            // :SENS:CURR:RANG 2E-";
-            string nplcString = ":SENS:CURR:NPLC ";
+            string initString1 = ":SYST:PRES;:SENS:FUNC 'CURR';:SENS:CURR:RANG 2E-";
+            string nplcString = ":SENS:CURR:DC:NPLC ";
 
             try
             {
 
-                //reset 6517
-                device.Write(initString1);
-                device.Write(initString2);
-                device.Write(initString3);
+                //reset 6487
+                device.Write(initString1 + Properties.Settings.Default.PicoammRange.ToString());
 
+                //turn off digital averaging filter
+                device.Write(":SENS:AVER:STAT OFF");
 
-                //Set Range
-                device.Write(":SENS:CURR:RANG 2E-" + Properties.Settings.Default.PicoammRange.ToString());
+                //turn off Zero Check
+                device.Write(":SYST:ZCH:STAT OFF");
 
-                //Set number of digits
-                device.Write("SENS:CURR:DIG 7");
+                //Set up current reporting string on READs from GPIB
+                device.Write(":FORM:ELEM READ");
+
+                //turn off Median filter
+                device.Write(":SENS:CURR:MED:STAT OFF");
 
                 //set up NPLC (analog filter)
                 device.Write(nplcString + Properties.Settings.Default.PicoammNPLC.ToString());
 
-                //Turn on Meter Connect and Vsource
-                device.Write(":SOUR:VOLT:MCON ON;:OUTP1:STAT ON;:SOUR:VOLT:RANG 1");
+                //set up arm and trace
+                device.Write(":ARM:COUNT INF; :TRACE:CLE; :TRACE:POINTS 1; :TRACE:FEED SENS; :TRACE:FEED SENS; :TRACE:FEED:CONT NEXT;"
+                        + ":TRIG:COUNT 1");
 
-                
-                device.IOTimeout = TimeoutValue.T1s;    
+#if (K6487)
+            
+        //set Voltage out range
+        device.Write(":SOUR:VOLT:RANG 500");
+
+        //set Voltage out to zero
+        device.Write(":SOUR:VOLT 0");
+
+        //turn on Voltage Out
+        device.Write(":SOUR:VOLT:STATE ON");
+            
+#endif
+
+                //Start measurements
+                device.Write(":INIT");
+
+                device.IOTimeout = TimeoutValue.T1s;
 
             }
             catch (Exception Ex)
@@ -140,23 +154,27 @@ namespace IVTester
                 System.Windows.Forms.MessageBox.Show(Ex.Message);
                 ErrorMessage();
             }
-            
+
         }
 
         override public double GetReading()
         {
             double returnValue = 0;
             string retrievedString = "0.00";
-            
+
             try
             {
-            
-            device.Write(":READ?");
 
-           
-            device.IOTimeout = TimeoutValue.T1s;
-            retrievedString = device.ReadString(14);
-            returnValue = Convert.ToDouble(retrievedString);
+                //    
+                device.Write(":ABORT");
+                device.Write(":ARM:COUNT 1");
+                device.Write(":INIT");
+                device.Write(":READ?");
+
+
+                device.IOTimeout = TimeoutValue.T1s;
+                retrievedString = device.ReadString(14);
+                returnValue = Convert.ToDouble(retrievedString);
             }
             catch (Exception Ex)
             {
@@ -208,5 +226,7 @@ namespace IVTester
         //}
 
     }
+
+
     
 }
