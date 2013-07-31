@@ -49,9 +49,10 @@
             this.currentMeasurePanel.Controls.Add(this.currentMeasureComboBox);
             this.currentMeasurePanel.Controls.Add(this.currentMeasureEnableCheckBox);
             this.currentMeasurePanel.Controls.Add(this.label1);
-            this.currentMeasurePanel.Location = new System.Drawing.Point(3, 3);
+            this.currentMeasurePanel.Location = new System.Drawing.Point(2, 2);
+            this.currentMeasurePanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.currentMeasurePanel.Name = "currentMeasurePanel";
-            this.currentMeasurePanel.Size = new System.Drawing.Size(396, 168);
+            this.currentMeasurePanel.Size = new System.Drawing.Size(298, 137);
             this.currentMeasurePanel.TabIndex = 7;
             // 
             // label2
@@ -59,39 +60,41 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(5, 6);
+            this.label2.Location = new System.Drawing.Point(4, 5);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(261, 18);
+            this.label2.Size = new System.Drawing.Size(213, 15);
             this.label2.TabIndex = 14;
             this.label2.Text = "CURRENT MEASURE CONTROL";
             // 
             // getReadingButton
             // 
-            this.getReadingButton.Location = new System.Drawing.Point(17, 123);
-            this.getReadingButton.Margin = new System.Windows.Forms.Padding(4);
+            this.getReadingButton.Location = new System.Drawing.Point(13, 100);
             this.getReadingButton.Name = "getReadingButton";
-            this.getReadingButton.Size = new System.Drawing.Size(100, 28);
+            this.getReadingButton.Size = new System.Drawing.Size(75, 23);
             this.getReadingButton.TabIndex = 0;
             this.getReadingButton.Text = "Get Reading";
             this.getReadingButton.UseVisualStyleBackColor = true;
+            this.getReadingButton.Click += new System.EventHandler(this.getReadingButton_Click);
             // 
             // presRdgBox
             // 
-            this.presRdgBox.Location = new System.Drawing.Point(170, 126);
-            this.presRdgBox.Margin = new System.Windows.Forms.Padding(4);
+            this.presRdgBox.Location = new System.Drawing.Point(128, 102);
             this.presRdgBox.Name = "presRdgBox";
             this.presRdgBox.ReadOnly = true;
-            this.presRdgBox.Size = new System.Drawing.Size(132, 22);
+            this.presRdgBox.Size = new System.Drawing.Size(100, 20);
             this.presRdgBox.TabIndex = 1;
             // 
             // resetButton
             // 
-            this.resetButton.Location = new System.Drawing.Point(155, 82);
+            this.resetButton.Location = new System.Drawing.Point(116, 67);
+            this.resetButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.resetButton.Name = "resetButton";
-            this.resetButton.Size = new System.Drawing.Size(75, 23);
+            this.resetButton.Size = new System.Drawing.Size(56, 19);
             this.resetButton.TabIndex = 2;
             this.resetButton.Text = "Reset";
             this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
             // currentMeasureComboBox
             // 
@@ -100,17 +103,19 @@
             "Itahaco Current Preamplifier",
             "Keithley 6517 Electrometer",
             "Keithley 648X Picoammeter"});
-            this.currentMeasureComboBox.Location = new System.Drawing.Point(170, 43);
+            this.currentMeasureComboBox.Location = new System.Drawing.Point(128, 35);
+            this.currentMeasureComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.currentMeasureComboBox.Name = "currentMeasureComboBox";
-            this.currentMeasureComboBox.Size = new System.Drawing.Size(213, 24);
+            this.currentMeasureComboBox.Size = new System.Drawing.Size(161, 21);
             this.currentMeasureComboBox.TabIndex = 3;
             // 
             // currentMeasureEnableCheckBox
             // 
             this.currentMeasureEnableCheckBox.AutoSize = true;
-            this.currentMeasureEnableCheckBox.Location = new System.Drawing.Point(17, 82);
+            this.currentMeasureEnableCheckBox.Location = new System.Drawing.Point(13, 67);
+            this.currentMeasureEnableCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.currentMeasureEnableCheckBox.Name = "currentMeasureEnableCheckBox";
-            this.currentMeasureEnableCheckBox.Size = new System.Drawing.Size(123, 21);
+            this.currentMeasureEnableCheckBox.Size = new System.Drawing.Size(95, 17);
             this.currentMeasureEnableCheckBox.TabIndex = 5;
             this.currentMeasureEnableCheckBox.Text = "Enable Control";
             this.currentMeasureEnableCheckBox.UseVisualStyleBackColor = true;
@@ -119,19 +124,21 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 46);
+            this.label1.Location = new System.Drawing.Point(10, 37);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 17);
+            this.label1.Size = new System.Drawing.Size(112, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Current Measure Tool:";
             // 
             // CurrentMeasureControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.currentMeasurePanel);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "CurrentMeasureControl";
-            this.Size = new System.Drawing.Size(404, 174);
+            this.Size = new System.Drawing.Size(303, 141);
             this.currentMeasurePanel.ResumeLayout(false);
             this.currentMeasurePanel.PerformLayout();
             this.ResumeLayout(false);

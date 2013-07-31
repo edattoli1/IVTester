@@ -19,8 +19,8 @@ namespace IVTester
         public Form1()
         {
             InitializeComponent();
-            ke6517Control = new Ke6517Control();
-            ke6517Control.InitSession();
+            //ke6517Control = new Ke6517Control();
+            //ke6517Control.InitSession();
         }
 
         //private void resetButton_Click(object sender, EventArgs e)

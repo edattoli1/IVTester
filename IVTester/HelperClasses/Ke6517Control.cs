@@ -11,7 +11,7 @@ namespace IVTester
     class Ke6517Control : CurrentMeasureToolAbstract
     {
         private int GPIBaddress = 14;
-        private Device device;
+        internal Device device;
 
         override public void InitSession()
         {

@@ -23,3 +23,7 @@ C:\Users\eric\Documents\GitHub\IVTester\IVTester\bin\Debug\NationalInstruments.D
 C:\Users\eric\Documents\GitHub\IVTester\IVTester\bin\Debug\NationalInstruments.DAQmx.xml
 C:\Users\eric\Documents\GitHub\IVTester\IVTester\obj\Debug\IVTester.DaqConfigForm.resources
 C:\Users\eric\Documents\GitHub\IVTester\IVTester\obj\Debug\IVTester.DaqControl.resources
+C:\Users\User\Documents\GitHub\IVTester\IVTester\bin\Debug\NationalInstruments.DAQmx.xml
+C:\Users\User\Documents\GitHub\IVTester\IVTester\obj\Debug\IVTester.DaqConfigForm.resources
+C:\Users\User\Documents\GitHub\IVTester\IVTester\obj\Debug\IVTester.DaqControl.resources
+C:\Users\User\Documents\GitHub\IVTester\IVTester\obj\Debug\IVTester.CurrentMeasureControl.resources
